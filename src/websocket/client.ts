@@ -59,7 +59,7 @@ export class WsClient {
           let data = encodedMsg.data;
 
           // If data is not a buffer, it will be a blob
-          if (typeof Buffer === undefined || !Buffer.isBuffer(data)) {
+          if (typeof Buffer === "undefined" || !Buffer.isBuffer(data)) {
             data = await data.arrayBuffer();
           }
 
